@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podgląd Produktu 3D</title>
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Plik stylów własnych (opcjonalnie) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Nawigacja (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Podgląd Produktu 3D</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Przełącz nawigację"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Strona Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lessons.html">Lekcje</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Nagłówek (Header) -->
+    <header class="bg-primary text-white text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="mb-3">Podgląd Produktu 3D</h1>
+        <p class="lead">
+          Odkryj interaktywny model systemu AVAS i jego funkcjonalności.
+        </p>
+      </div>
+    </header>
+
+    <!-- Główna zawartość strony -->
+    <main class="container mb-5">
+      <div class="row">
+        <div class="col">
+          <!-- Wideo w figure -->
+          <figure class="text-center mb-4">
+            <img
+              src="/avas/avas.gif"
+              width="500"
+              height="300"
+              class="img-fluid"
+            ></img>
+            <figcaption class="text-muted mt-2">
+              Interaktywny model systemu AVAS
+            </figcaption>
+          </figure>
+
+          <!-- Tabela z danymi produktu -->
+          <h2 class="mb-3">Specyfikacja</h2>
+          <table class="table table-bordered table-striped">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Cecha</th>
+                <th scope="col">Wartość</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Przykład 1</td>
+                <td>Wartość 1</td>
+              </tr>
+              <tr>
+                <td>Przykład 2</td>
+                <td>Wartość 2</td>
+              </tr>
+              <!-- Możesz dodać więcej wierszy w zależności od potrzeb -->
+            </tbody>
+          </table>
+
+          <!-- Przycisk "Pobierz" -->
+          <div class="text-center mt-4">
+            <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+            <a href="avas.obj" class="btn btn-success" download>
+              Pobierz model 3D w formacie .obj
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Stopka (Footer) -->
+    <footer class="bg-light text-center py-3">
+      <div class="container">
+        <small class="text-muted">&copy; 2023 Podgląd Produktu 3D</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper (np. do dropdownów) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

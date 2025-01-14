@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektryczna nagrzewnica wodna - Lekcja 1</title>
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Wklej tutaj kod CSS */
+      
+
+/* Możesz zmienić kolor na dowolny, np. czarny lub dowolny odcień */
+.carousel-control-prev-icon {
+  background-color: black; /* Czarny kolor */
+  border-radius: 20%; /* Opcjonalnie zaokrąglenie */
+}
+
+.carousel-control-next-icon {
+  background-color: black; /* Czarny kolor */
+  border-radius: 20%; /* Opcjonalnie zaokrąglenie */
+}
+iframe, embed {
+          border: none;
+          overflow: hidden;
+      }
+      #hiddenDiv {
+            display: none;
+        }
+
+    </style>
+
+    
+
+  </head>
+  <body>
+    <!-- Nawigacja (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">ELMOB CAD</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Przełącz nawigację"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Strona Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lessons.html">Lekcje</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Nagłówek (Header) -->
+    <header class="bg-primary text-white text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="mb-3">Nagrzewnica elektryczna</h1>
+        </div>
+    </header>
+
+    <!-- Główna zawartość strony -->
+    <main class="container mb-5">
+      <div class="row">
+        <div class="col">
+          <!-- Karuzela Bootstrap -->
+          <figure class="text-center mb-4">
+            <div
+              id="nagrzewnicaCarousel"
+              class="carousel slide"
+            >
+              <div class="carousel-inner">
+                <!-- Pierwszy slajd (aktywny) -->
+                <div class="carousel-item active">
+                  <img
+                    src="nagrzewnica/nagrzewnica.gif"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 1"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <!-- Drugi slajd -->
+                
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica3.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica4.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica5.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica6.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica1.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+                <!-- Trzeci slajd -->
+                <div class="carousel-item">
+                  <img
+                    src="nagrzewnica/nagrzewnica2.png"
+                    class="img-fluid d-block mx-auto"
+                    alt="Nagrzewnica 2"
+                    style="width: 700px; height: 420px; object-fit: cover;"
+                  />
+                </div>
+              </div>
+              <!-- Przyciski karuzeli -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#nagrzewnicaCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Poprzedni</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#nagrzewnicaCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Następny</span>
+              </button>
+            </div>
+            
+          </figure>
+
+          <div class="text-center m-4">
+            <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+            <a href="nagrzewnica/nagrzewnica.obj" class="btn btn-success btn-dark btn-lg" download>
+              Pobierz model 3D!
+            </a>
+            <a id="toggleButton" class="btn btn-success btn-dark btn-lg">Pokaż wymiary</a>
+            
+          </div>
+
+          <div id = "hiddenDiv" >
+            <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+            <embed src="nagrzewnica/nagrzewnica-schemat.pdf" type="application/pdf" width="70%" height="600px">
+            
+          </div>
+          
+          <script>
+            const button = document.getElementById('toggleButton');
+            const div = document.getElementById('hiddenDiv');
+      
+            button.addEventListener('click', () => {
+                // Sprawdzamy, czy sekcja jest widoczna
+                if (div.style.display === 'none' || div.style.display === '') {
+                    div.style.display = 'block'; // Pokazujemy sekcję
+                    button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
+                } else {
+                    div.style.display = 'none'; // Ukrywamy sekcję
+                    button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
+                }
+            });
+        </script>
+
+          
+          <div>
+            <h2 class="mb-3 text-center">Opis</h2>
+            <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+              Nagrzewnica elektryczna to kluczowy element systemu ogrzewania w pojazdach
+              elektrycznych, zastępujący tradycyjne nagrzewnice wykorzystujące ciepło z
+              silnika spalinowego. Urządzenie to przekształca energię elektryczną bezpośrednio
+              w ciepło, co pozwala na szybkie i efektywne ogrzewanie wnętrza pojazdu nawet przy
+              niskich temperaturach zewnętrznych. Dzięki precyzyjnemu sterowaniu, nagrzewnica
+              elektryczna zapewnia optymalny komfort termiczny pasażerom, jednocześnie
+              minimalizując zużycie energii. Jest to rozwiązanie przyjazne środowisku, idealnie
+              wpisujące się w założenia zrównoważonej mobilności.
+            </p>
+          </div>
+
+          <!-- Tabela z danymi produktu -->
+          <h2 class="mb-3">Przykładowa specyfikacja</h2>
+          <table class="table table-bordered table-striped">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Cecha</th>
+                <th scope="col">Wartość</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moc</td>
+                <td>2 kW</td>
+              </tr>
+              <tr>
+                <td>Waga</td>
+                <td>1,5 kg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- Stopka (Footer) -->
+    <footer class="bg-light text-center py-3">
+      <div class="container">
+        <small class="text-muted">&copy; 2023 ELMOB CAD</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
