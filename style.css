@@ -43,7 +43,41 @@ button {
   margin-top: 10px;
 }
 
+.carousel-control-prev-icon {
+  background-color: black;
+  /* Czarny kolor */
+  border-radius: 20%;
+  /* Opcjonalnie zaokrąglenie */
+}
 
+.carousel-control-next-icon {
+  background-color: black;
+  /* Czarny kolor */
+  border-radius: 20%;
+  /* Opcjonalnie zaokrąglenie */
+}
+
+iframe,
+embed {
+  border: none;
+  overflow: hidden;
+}
+
+#hiddenDiv {
+  display: none;
+}
+.dropdown-menu {
+max-width: calc(100vw - 20px); /* Upewnij się, że nie wykracza poza ekran */
+}
+
+.dropdown-item.no-hover {
+background-color: transparent; /* Brak tła */
+}
+
+.dropdown-item.no-hover:hover {
+background-color: transparent; /* Brak tła po najechaniu */
+color: inherit; /* Zachowaj oryginalny kolor tekstu */
+}
 
 
 

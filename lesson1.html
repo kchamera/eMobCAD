@@ -8,37 +8,6 @@
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Wklej tutaj kod CSS */
-
-
-    /* Możesz zmienić kolor na dowolny, np. czarny lub dowolny odcień */
-    .carousel-control-prev-icon {
-      background-color: black;
-      /* Czarny kolor */
-      border-radius: 20%;
-      /* Opcjonalnie zaokrąglenie */
-    }
-
-    .carousel-control-next-icon {
-      background-color: black;
-      /* Czarny kolor */
-      border-radius: 20%;
-      /* Opcjonalnie zaokrąglenie */
-    }
-
-    iframe,
-    embed {
-      border: none;
-      overflow: hidden;
-    }
-
-    #hiddenDiv {
-      display: none;
-    }
-  </style>
-
-
 
 </head>
 
@@ -56,8 +25,13 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">Strona Główna</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="lessons.html" id="lessonsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              Lekcje
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="lessonsDropdown">
+              <li><a class="dropdown-item no-hover" href="lesson1.html">Nagrzewnica elektryczna</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -73,7 +47,7 @@
 
   <!-- Główna zawartość strony -->
   <main class="container mb-5">
-    <div class="container" style="display: grid; grid-template-columns: auto 1fr; gap: 5px;">
+    <div class="container" style="display: grid; grid-template-columns: 4fr 1fr; gap: 5px;">
       <div class="box">
         <!-- Karuzela Bootstrap -->
         <figure class="text-center mb-4">
@@ -128,12 +102,12 @@
         </figure>
       </div>
       <div class="box">
-        <div class="text-center">
+        <div class="text-center m-4">
           <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-          <a href="nagrzewnica.zip" class="btn btn-success btn-primary  m-2" download>
-            Pobierz model 3D!
+          <a href="nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download>
+            Pobierz model 3D
           </a> <br>
-          <a id="toggleButton" class="btn btn-success btn-primary m-2">Pokaż wymiary</a>
+          <a id="toggleButton" class="btn btn-success btn-primary m-3">Pokaż wymiary</a>
 
         </div>
 
