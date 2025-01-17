@@ -1,116 +1,173 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Podgląd Produktu 3D</title>
-    <!-- CSS Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Plik stylów własnych (opcjonalnie) -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Nawigacja (Navbar) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Podgląd Produktu 3D</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Przełącz nawigację"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Strona Główna</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="lessons.html">Lekcje</a>
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gniazdo ładowania CCS Type 2 - Lekcja 2</title>
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ELMOB CAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lessons.html">Lekcje</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nagłówek (Header) -->
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="mb-3">Gniazdo ładowania CCS Type 2</h1>
+      <p class="lead">
+        Odkryj interaktywny model 3D gniazda ładowania CCS Type 2 oraz jego funkcjonalności.
+      </p>
+    </div>
+  </header>
+
+  <!-- Główna zawartość strony -->
+  <main class="container mb-5">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+      <div class="box">
+        <div class="text-center mb-4" >
+          <img src="ccs/ccs.gif" class="img-fluid d-block mx-auto" alt="Nagrzewnica 1"
+                  style="width: 700; height: 420; object-fit: cover;" />
+                  <figcaption class="text-muted mt-2">
+                    Interaktywny model 3D gniazda ładowania CCS Type 2
+                  </figcaption>
+          
         </div>
       </div>
-    </nav>
 
-    <!-- Nagłówek (Header) -->
-    <header class="bg-primary text-white text-center py-5 mb-4">
-      <div class="container">
-        <h1 class="mb-3">Podgląd Produktu 3D</h1>
-        <p class="lead">
-          Odkryj interaktywny model systemu AVAS i jego funkcjonalności.
-        </p>
-      </div>
-    </header>
+      <div class="box">
+        <!-- Karuzela Bootstrap -->
+        <figure class="text-center mb-4">
+          <div id="nagrzewnicaCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              
+              <!-- Drugi slajd -->
 
-    <!-- Główna zawartość strony -->
-    <main class="container mb-5">
-      <div class="row">
-        <div class="col">
-          <!-- Wideo w figure -->
-          <figure class="text-center mb-4">
-            <img
-              src="/avas/avas.gif"
-              width="500"
-              height="300"
-              class="img-fluid"
-            ></img>
-            <figcaption class="text-muted mt-2">
-              Interaktywny model systemu AVAS
-            </figcaption>
-          </figure>
-
-          <!-- Tabela z danymi produktu -->
-          <h2 class="mb-3">Specyfikacja</h2>
-          <table class="table table-bordered table-striped">
-            <thead class="table-light">
-              <tr>
-                <th scope="col">Cecha</th>
-                <th scope="col">Wartość</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Przykład 1</td>
-                <td>Wartość 1</td>
-              </tr>
-              <tr>
-                <td>Przykład 2</td>
-                <td>Wartość 2</td>
-              </tr>
-              <!-- Możesz dodać więcej wierszy w zależności od potrzeb -->
-            </tbody>
-          </table>
-
-          <!-- Przycisk "Pobierz" -->
-          <div class="text-center mt-4">
-            <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-            <a href="avas.obj" class="btn btn-success" download>
-              Pobierz model 3D w formacie .obj
-            </a>
+              <div class="carousel-item active">
+                <img src="ccs/ccs1.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ccs/ccs2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ccs/ccs3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ccs/ccs4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ccs/ccs5.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+              <!-- Trzeci slajd -->
+              <div class="carousel-item">
+                <img src="ccs/ccs6.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2" 
+                style="width: auto; height: auto; object-fit: cover;" />
+              </div>
+            </div>
+            <!-- Przyciski karuzeli -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Poprzedni</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Następny</span>
+            </button>
           </div>
-        </div>
-      </div>
-    </main>
 
-    <!-- Stopka (Footer) -->
-    <footer class="bg-light text-center py-3">
-      <div class="container">
-        <small class="text-muted">&copy; 2023 Podgląd Produktu 3D</small>
+        </figure>
       </div>
-    </footer>
+      
+    </div>
 
-    <!-- Bootstrap JS + Popper (np. do dropdownów) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    ></script>
-  </body>
+    
+
+    
+
+    <a href="ccs.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+            Pobierz model 3D
+          </a> 
+          <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+    
+    <div>
+      <div id="hiddenDiv">
+      <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+      <embed src="ccs/ccs-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+
+    </div>
+
+    <script>
+      const button = document.getElementById('toggleButton');
+      const div = document.getElementById('hiddenDiv');
+
+      button.addEventListener('click', () => {
+        // Sprawdzamy, czy sekcja jest widoczna
+        if (div.style.display === 'none' || div.style.display === '') {
+          div.style.display = 'block'; // Pokazujemy sekcję
+          button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
+        } else {
+          div.style.display = 'none'; // Ukrywamy sekcję
+          button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
+        }
+      });
+    </script>
+    
+    
+      <h2 class="m-3 text-center">Opis</h2>
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+        Gniazdo ładowania CCS Type 2 to nowoczesny standard wykorzystywany w pojazdach elektrycznych i hybrydowych typu plug-in, zapewniający szybkie i niezawodne ładowanie akumulatorów. Dzięki zintegrowaniu funkcji ładowania prądem przemiennym (AC) i stałym (DC), CCS Type 2 oferuje wyjątkową elastyczność i wydajność. Umożliwia ładowanie zarówno z domowych gniazdek, jak i z szybkich stacji ładowania, osiągając moc nawet do 350 kW.
+      </p>
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+        Ergonomiczna konstrukcja gniazda i jego kompatybilność z większością europejskich standardów ładowania czyni go uniwersalnym rozwiązaniem dla użytkowników. Wykorzystanie najwyższej jakości materiałów gwarantuje bezpieczeństwo, odporność na warunki atmosferyczne oraz długą żywotność. CCS Type 2 to symbol nowoczesnej mobilności, łączący innowacyjność z funkcjonalnością w dążeniu do zrównoważonego transportu.
+      </p>
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+        Idealnie sprawdzi się w pojazdach, które wymagają szybkiego ładowania podczas podróży, jednocześnie oferując możliwość wygodnego ładowania w warunkach domowych. Gniazdo CCS Type 2 to przyszłość elektromobilności – technologia zaprojektowana z myślą o ekologii i użytkowniku.
+      </p>
+    </div>
+    
+
+    <!-- Tabela z danymi produktu -->
+
+  </main>
+
+  <!-- Stopka (Footer) -->
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <small class="text-muted">&copy; 2023 ELMOB CAD</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
