@@ -4,11 +4,14 @@ footer{
 
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.8;
+  color: #333;
 }
+
 
 header {
   background-color: #4CAF50;
@@ -20,11 +23,12 @@ header {
 
 nav a {
   margin: 0 10px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 main {
+
   padding: 20px;
   text-align: center;
 }
@@ -42,6 +46,8 @@ label, input {
 button {
   margin-top: 10px;
 }
+
+
 
 .carousel-control-prev-icon {
   background-color: black;
