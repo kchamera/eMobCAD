@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superkondensator - Lekcja 5</title>
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ELMOB CAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lessons.html">Lekcje</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nagłówek (Header) -->
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="mb-3">Superkondensator</h1>
+      <p class="lead">
+        Odkryj interaktywny model 3D superkondensatora oraz jego funkcjonalności.
+      </p>
+    </div>
+  </header>
+
+  <!-- Główna zawartość strony -->
+  <main class="container mb-5">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; align-items: center; justify-content: center;">
+      <div class="box">
+        <div class="text-center m-4">
+          <img src="superkondensator/superkondensator.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
+            style="width: 100%; height: 500px; object-fit: cover;" />
+          <figcaption class="text-muted mt-2">
+            Interaktywny model 3D superkondensatora
+          </figcaption>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <!-- Karuzela Bootstrap -->
+        <figure class="text-center m-6">
+          <div id="nagrzewnicaCarousel" class="carousel slide">
+            <div class="carousel-inner">
+
+              <!-- Drugi slajd -->
+
+              <div class="carousel-item active">
+                <img src="superkondensator/superkondensator1.png" class="img-fluid d-block mx-auto" alt="AVas 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="superkondensator/superkondensator2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="superkondensator/superkondensator3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="superkondensator/superkondensator4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              
+            </div>
+            <!-- Przyciski karuzeli -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Poprzedni</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Następny</span>
+            </button>
+          </div>
+
+        </figure>
+      </div>
+
+    </div>
+
+
+
+
+
+    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+      Pobierz model 3D
+    </a>
+    <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+
+    <div>
+      <div id="hiddenDiv">
+        <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+        <embed src="superkondensator/superkondensator-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+
+      </div>
+
+      <script>
+        const button = document.getElementById('toggleButton');
+        const div = document.getElementById('hiddenDiv');
+
+        button.addEventListener('click', () => {
+          // Sprawdzamy, czy sekcja jest widoczna
+          if (div.style.display === 'none' || div.style.display === '') {
+            div.style.display = 'block'; // Pokazujemy sekcję
+            button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
+          } else {
+            div.style.display = 'none'; // Ukrywamy sekcję
+            button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
+          }
+        });
+      </script>
+
+<section class="mb-4">
+  <h2 class="m-3 text-center">Opis</h2>
+  <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+    Superkondensator, znany również jako ultrakondensator, to urządzenie magazynujące energię, które łączy właściwości kondensatorów i baterii. Charakteryzuje się wysoką gęstością mocy, szybkim czasem ładowania i wyjątkową trwałością cykliczną. W przeciwieństwie do baterii, superkondensatory przechowują energię w postaci pola elektrostatycznego, a nie w wyniku reakcji chemicznych, co pozwala na natychmiastowy przepływ energii. 
+  </p>
+</section>
+
+<section class="mb-4">
+  <h2 class="m-3 text-center">Zastosowania</h2>
+  <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+    Superkondensatory znajdują szerokie zastosowanie w obszarach wymagających szybkiego ładowania i dostawy energii. Wykorzystywane są w pojazdach elektrycznych do wspomagania baterii, w systemach rekuperacji energii (np. w hamulcach regeneracyjnych) oraz w aplikacjach takich jak zasilanie awaryjne, stabilizacja napięcia czy urządzenia przenośne. Dzięki swoim właściwościom są idealne w sytuacjach, gdzie wymagana jest wysoka gęstość mocy i trwałość cykliczna.
+  </p>
+</section>
+
+<!-- Sekcja Budowa fizyczna -->
+<section class="mb-4">
+  <h2 class="m-3 text-center">Budowa fizyczna</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Elektrody</td>
+        <td>Wykonane z materiałów o wysokiej powierzchni właściwej, takich jak węgiel aktywny, zapewniają dużą pojemność.</td>
+      </tr>
+      <tr>
+        <td>Separator</td>
+        <td>Cienka membrana oddzielająca elektrody, przepuszczająca jony, ale izolująca elektrycznie.</td>
+      </tr>
+      <tr>
+        <td>Elektrolit</td>
+        <td>Płynny lub stały, umożliwiający przepływ jonów pomiędzy elektrodami.</td>
+      </tr>
+      <tr>
+        <td>Obudowa</td>
+        <td>Hermetyczna konstrukcja chroniąca przed czynnikami zewnętrznymi i utrzymująca stabilność struktury.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Sekcja Zalety i wady -->
+<section class="mb-4">
+  <h2 class="m-3 text-center">Zalety i wady</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Kategoria</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Zalety</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Wysoka gęstość mocy, umożliwiająca szybkie ładowanie i rozładowanie.</li>
+            <li>Wyjątkowa trwałość – miliony cykli ładowania i rozładowania.</li>
+            <li>Brak reakcji chemicznych, co minimalizuje degradację materiałów.</li>
+            <li>Przyjazność dla środowiska – brak toksycznych materiałów.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Wady</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Niska gęstość energii w porównaniu z bateriami.</li>
+            <li>Kosztowne materiały i technologie produkcji.</li>
+            <li>Samorozładowanie – energia jest szybciej tracona w czasie spoczynku.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Sekcja Zastosowania -->
+
+
+
+
+
+    </div>
+
+    <!-- Tabela z danymi produktu -->
+
+  </main>
+
+  <!-- Stopka (Footer) -->
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <small class="text-muted">&copy; 2023 ELMOB CAD</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
