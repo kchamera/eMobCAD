@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVAS - Lekcja 3</title>
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ELMOB CAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lessons.html">Lekcje</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nagłówek (Header) -->
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="mb-3">AVAS (Acoustic Vehicle Alerting System)</h1>
+      <p class="lead">
+        Odkryj interaktywny model 3D AVAS oraz jego funkcjonalności.
+      </p>
+    </div>
+  </header>
+
+  <!-- Główna zawartość strony -->
+  <main class="container mb-5">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+      <div class="box">
+        <div class="text-center m-4" >
+          <img src="avas/avas.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
+                  style="width: 100%; height: 500px; object-fit: cover;" />
+                  <figcaption class="text-muted mt-2">
+                    Interaktywny model 3D AVAS
+                  </figcaption>
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <!-- Karuzela Bootstrap -->
+        <figure class="text-center mb-4">
+          <div id="nagrzewnicaCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              
+              <!-- Drugi slajd -->
+
+              <div class="carousel-item active">
+                <img src="avas/avas1.png" class="img-fluid d-block mx-auto" alt="AVas 2"
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="avas/avas2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="avas/avas3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="avas/avas4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="avas/avas5.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+              <!-- Trzeci slajd -->
+              <div class="carousel-item">
+                <img src="avas/avas6.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2" 
+                style="width: 80%; height: auto; object-fit: cover;" />
+              </div>
+            </div>
+            <!-- Przyciski karuzeli -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Poprzedni</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Następny</span>
+            </button>
+          </div>
+
+        </figure>
+      </div>
+      
+    </div>
+
+    
+
+    
+
+    <a href="avas.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+            Pobierz model 3D
+          </a> 
+          <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+    
+    <div>
+      <div id="hiddenDiv">
+      <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+      <embed src="avas/avas-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+
+    </div>
+
+    <script>
+      const button = document.getElementById('toggleButton');
+      const div = document.getElementById('hiddenDiv');
+
+      button.addEventListener('click', () => {
+        // Sprawdzamy, czy sekcja jest widoczna
+        if (div.style.display === 'none' || div.style.display === '') {
+          div.style.display = 'block'; // Pokazujemy sekcję
+          button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
+        } else {
+          div.style.display = 'none'; // Ukrywamy sekcję
+          button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
+        }
+      });
+    </script>
+
+<section class="mb-4">
+  <h2 class="m-3 text-center">Opis</h2>
+  <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+    Acoustic Vehicle Alerting System (AVAS) to system akustyczny, który został wprowadzony w odpowiedzi na rosnącą liczbę pojazdów elektrycznych i hybrydowych charakteryzujących się bardzo cichą pracą. System ten emituje sztuczny dźwięk podczas poruszania się pojazdu przy niskich prędkościach, co zwiększa bezpieczeństwo pieszych, rowerzystów oraz innych uczestników ruchu drogowego. AVAS jest szczególnie istotny w miejscach o dużym natężeniu ruchu pieszych, takich jak miasta czy osiedla mieszkaniowe, gdzie tradycyjny dźwięk silnika spalinowego odgrywał rolę ostrzegawczą.
+  </p>
+</section>
+
+<!-- Sekcja Budowa fizyczna -->
+<section class="mb-4">
+  <h2 class="m-3 text-center">Budowa fizyczna</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Moduł dźwiękowy</td>
+        <td>Generuje dźwięk o odpowiedniej częstotliwości i natężeniu, dostosowany do wymagań regulacyjnych.</td>
+      </tr>
+      <tr>
+        <td>Głośniki</td>
+        <td>Umieszczone zazwyczaj w przedniej części pojazdu, emitujące dźwięk w kierunku otoczenia.</td>
+      </tr>
+      <tr>
+        <td>Sterownik</td>
+        <td>Odpowiada za aktywację systemu w zależności od prędkości pojazdu i warunków jazdy.</td>
+      </tr>
+      <tr>
+        <td>Źródło zasilania</td>
+        <td>Podłączone do głównego systemu elektrycznego pojazdu, zapewniające nieprzerwaną pracę systemu.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Sekcja Zalety i wady -->
+<section class="mb-4">
+  <h2 class="m-3 text-center">Zalety i wady</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Kategoria</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Zalety</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Zwiększa bezpieczeństwo pieszych i rowerzystów.</li>
+            <li>Obowiązkowy w wielu krajach, zgodny z międzynarodowymi regulacjami.</li>
+            <li>Minimalny wpływ na zużycie energii pojazdu.</li>
+            <li>Możliwość personalizacji dźwięków w niektórych modelach.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Wady</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Dodatkowy koszt produkcji i implementacji w pojazdach.</li>
+            <li>Może być odbierany jako irytujący w cichych miejscach.</li>
+            <li>Konieczność utrzymania systemu w odpowiednim stanie technicznym.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+    </div>
+
+    <!-- Tabela z danymi produktu -->
+
+  </main>
+
+  <!-- Stopka (Footer) -->
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <small class="text-muted">&copy; 2023 ELMOB CAD</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

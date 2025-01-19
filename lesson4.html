@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ogniwo bateryjne - Lekcja 4</title>
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ELMOB CAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lessons.html">Lekcje</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nagłówek (Header) -->
+  <header class="bg-primary text-white text-center py-5 mb-4">
+    <div class="container">
+      <h1 class="mb-3">Ogniwo bateryjne</h1>
+      <p class="lead">
+        Odkryj interaktywny model 3D ogniwa bateryjnego oraz jego funkcjonalności.
+      </p>
+    </div>
+  </header>
+
+  <!-- Główna zawartość strony -->
+  <main class="container mb-5">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+      <div class="box">
+        <div class="text-center m-4">
+          <img src="ogniwo/ogniwo.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
+            style="width: 100%; height: 500px; object-fit: cover;" />
+          <figcaption class="text-muted mt-2">
+            Interaktywny model 3D ogniwa bateryjnego
+          </figcaption>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <!-- Karuzela Bootstrap -->
+        <figure class="text-center mb-4">
+          <div id="nagrzewnicaCarousel" class="carousel slide">
+            <div class="carousel-inner">
+
+              <!-- Drugi slajd -->
+
+              <div class="carousel-item active">
+                <img src="ogniwo/ogniwo1.png" class="img-fluid d-block mx-auto" alt="AVas 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ogniwo/ogniwo2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ogniwo/ogniwo3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ogniwo/ogniwo4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <div class="carousel-item">
+                <img src="ogniwo/ogniwo5.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+              <!-- Trzeci slajd -->
+              <div class="carousel-item">
+                <img src="ogniwo/ogniwo6.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                  style="width: 70%; height: auto; object-fit: cover;" />
+              </div>
+            </div>
+            <!-- Przyciski karuzeli -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Poprzedni</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nagrzewnicaCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Następny</span>
+            </button>
+          </div>
+
+        </figure>
+      </div>
+
+    </div>
+
+
+
+
+
+    <a href="ogniwo" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+      Pobierz model 3D
+    </a>
+    <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+
+    <div>
+      <div id="hiddenDiv">
+        <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+        <embed src="ogniwo/ogniwo-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+
+      </div>
+
+      <script>
+        const button = document.getElementById('toggleButton');
+        const div = document.getElementById('hiddenDiv');
+
+        button.addEventListener('click', () => {
+          // Sprawdzamy, czy sekcja jest widoczna
+          if (div.style.display === 'none' || div.style.display === '') {
+            div.style.display = 'block'; // Pokazujemy sekcję
+            button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
+          } else {
+            div.style.display = 'none'; // Ukrywamy sekcję
+            button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
+          }
+        });
+      </script>
+
+      <section class="mb-4">
+        <h2 class="m-3 text-center">Opis</h2>
+        <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+          Ogniwo bateryjne to podstawowy element akumulatora stosowanego w pojazdach elektrycznych, pełniący rolę
+          magazynu energii elektrycznej. Składa się z elektrody dodatniej (katody), elektrody ujemnej (anody) oraz
+          elektrolitu umożliwiającego przepływ jonów. Dzięki procesowi elektrochemicznemu ogniwo bateryjne zamienia
+          energię chemiczną w energię elektryczną, dostarczając zasilanie do silnika elektrycznego i innych systemów
+          pojazdu. Współczesne ogniwa, takie jak litowo-jonowe, charakteryzują się wysoką gęstością energii, długą
+          żywotnością oraz efektywnością w ładowaniu i rozładowywaniu.
+        </p>
+      </section>
+
+      <!-- Sekcja Budowa fizyczna -->
+      <section class="mb-4">
+        <h2 class="m-3 text-center">Budowa fizyczna</h2>
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Element</th>
+              <th>Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Katoda</td>
+              <td>Elektroda dodatnia wykonana z materiałów takich jak tlenki metali (np. litowo-kobaltowe).</td>
+            </tr>
+            <tr>
+              <td>Anoda</td>
+              <td>Elektroda ujemna, najczęściej z grafitu, magazynująca jony litu podczas ładowania.</td>
+            </tr>
+            <tr>
+              <td>Elektrolit</td>
+              <td>Przewodnik jonowy w postaci cieczy, żelu lub ciała stałego umożliwiający przepływ jonów między anodą a
+                katodą.</td>
+            </tr>
+            <tr>
+              <td>Separator</td>
+              <td>Cienka warstwa izolacyjna zapobiegająca kontaktowi między anodą a katodą, pozwalając jednocześnie na
+                przepływ jonów.</td>
+            </tr>
+            <tr>
+              <td>Obudowa</td>
+              <td>Hermetyczna osłona chroniąca ogniwo przed uszkodzeniami mechanicznymi i warunkami atmosferycznymi.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Sekcja Zalety i wady -->
+      <section class="mb-4">
+        <h2 class="m-3 text-center">Zalety i wady</h2>
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Kategoria</th>
+              <th>Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zalety</td>
+              <td>
+                <ul class="list-unstyled text-start m-0 p-0">
+                  <li>Wysoka gęstość energii, umożliwiająca dłuższy zasięg pojazdu.</li>
+                  <li>Wielokrotne ładowanie i rozładowywanie bez znaczącej utraty pojemności.</li>
+                  <li>Brak emisji szkodliwych substancji podczas pracy.</li>
+                  <li>Kompaktowa budowa i możliwość dopasowania kształtu do konstrukcji pojazdu.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Wady</td>
+              <td>
+                <ul class="list-unstyled text-start m-0 p-0">
+                  <li>Wysoki koszt produkcji ogniw litowo-jonowych.</li>
+                  <li>Ograniczona trwałość przy ekstremalnych temperaturach.</li>
+                  <li>Ryzyko przegrzania i uszkodzenia w przypadku nieprawidłowego użytkowania.</li>
+                  <li>Konieczność recyklingu i specjalistycznego przetwarzania.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+
+    </div>
+
+    <!-- Tabela z danymi produktu -->
+
+  </main>
+
+  <!-- Stopka (Footer) -->
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <small class="text-muted">&copy; 2023 ELMOB CAD</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
