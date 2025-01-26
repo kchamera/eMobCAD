@@ -7,11 +7,14 @@
   <title>Gniazdo ładowania CCS Type 2 - Lekcja 2</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body id = "content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -21,24 +24,39 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
-          </li>
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+            </li>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
         </ul>
-      </div>
+    </div>
     </div>
   </nav>
 
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
-      <h1 class="mb-3">Gniazdo ładowania CCS Type 2</h1>
-      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;">Złącze CCS (Combined Charging System) Type 2 to nowoczesny standard ładowania pojazdów elektrycznych (EV) oraz hybrydowych typu plug-in (PHEV). Integruje funkcje ładowania prądem przemiennym (AC) oraz stałym (DC), umożliwiając elastyczne wykorzystanie różnych źródeł energii.</p>
-    
+      <h1 class="mb-3" data-lang="pl">Gniazdo ładowania CCS Type 2</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">CCS Type 2 charging port</h1>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
+        Złącze CCS (Combined Charging System) Type 2 to nowoczesny standard ładowania pojazdów elektrycznych (EV) oraz hybrydowych typu plug-in (PHEV). Integruje funkcje ładowania prądem przemiennym (AC) oraz stałym (DC), umożliwiając elastyczne wykorzystanie różnych źródeł energii.
+      </p>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        CCS (Combined Charging System) Type 2 connector is a modern standard for charging electric vehicles (EVs) and plug-in hybrid electric vehicles (PHEVs). It integrates alternating current (AC) and direct current (DC) charging functions, enabling flexible utilization of various energy sources.</p>
     </div>
   </header>
 
@@ -49,8 +67,13 @@
         <div class="text-center mb-4">
           <img src="ccs/ccs.gif" class="img-fluid d-block mx-auto" alt="Model 3D"
             style="width: 100%; height: 500px; object-fit: contain; " />
-          <figcaption class="text-muted mt-2">
+         
+          <figcaption class="text-muted mt-2" data-lang="pl">
             Interaktywny model 3D gniazda ładowania CCS Type 2
+          </figcaption>
+         
+          <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
+            Interactive 3D Model of an CCS Type 2 charging port
           </figcaption>
         </div>
       </div>
@@ -108,38 +131,27 @@
 
     
 
-    <a href="ccs.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
-            Pobierz model 3D
-          </a> 
-          <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
-    
-    <div>
-      <div id="hiddenDiv">
-      <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-      <embed src="ccs/ccs-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+    <a href="ccs.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
+      Pobierz model 3D
+    </a> 
+    <a href="ccs.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Download 3D model
+    </a> 
+    <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
+    <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
 
-    </div>
+<div>
+<div id="hiddenDiv">
+<!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+<embed src="ccs/ccs-rysunek.pdf" type="application/pdf" width="70%" height="600px">
 
-    <script>
-      const button = document.getElementById('toggleButton');
-      const div = document.getElementById('hiddenDiv');
+</div>
 
-      button.addEventListener('click', () => {
-        // Sprawdzamy, czy sekcja jest widoczna
-        if (div.style.display === 'none' || div.style.display === '') {
-          div.style.display = 'block'; // Pokazujemy sekcję
-          button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
-        } else {
-          div.style.display = 'none'; // Ukrywamy sekcję
-          button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
-        }
-      });
-    </script>
     
     
 
     <!-- Sekcja Charakterystyka techniczna -->
-    <section class="mb-4">
+    <section class="mb-4" data-lang="pl">
       <h2 class="m-3 text-center">Charakterystyka techniczna</h2>
       <table class="table table-bordered text-center">
         <thead class="table-light">
@@ -166,7 +178,7 @@
     </section>
 
    <!-- Sekcja Budowa fizyczna -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Budowa fizyczna</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -193,7 +205,7 @@
 </section>
 
 <!-- Sekcja Zalety i wady -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Zalety i wady</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -227,7 +239,95 @@
   </table>
 </section>
 
-   
+  <!-- Technical Specifications Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Technical Specifications</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Parameter</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Charging Voltage (AC/DC)</td>
+        <td>AC: up to 500 V, DC: up to 1000 V</td>
+      </tr>
+      <tr>
+        <td>Maximum Charging Power</td>
+        <td>AC: 43 kW, DC: 350 kW</td>
+      </tr>
+      <tr>
+        <td>Current Range</td>
+        <td>AC: up to 63 A, DC: up to 500 A</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Physical Construction Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Physical Construction</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AC Part</td>
+        <td>5 pins: L1, L2, L3 (phase), N (neutral), and PE (ground).</td>
+      </tr>
+      <tr>
+        <td>DC Part</td>
+        <td>Two pins dedicated to direct current transfer.</td>
+      </tr>
+      <tr>
+        <td>Signal Pins</td>
+        <td>CP (Control Pilot) and PP (Proximity Pilot) for communication between the vehicle and the charging station.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Advantages and Disadvantages Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Advantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Versatility: AC and DC charging.</li>
+            <li>High Power: Fast charging even large batteries.</li>
+            <li>Compatibility with European standards.</li>
+            <li>Safety: Advanced protection systems.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Disadvantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Complexity of fast charging infrastructure.</li>
+            <li>Limited compatibility outside Europe.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
     </div>
     

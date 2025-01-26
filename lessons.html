@@ -5,79 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🚗⚡ Lista Lekcji</title>
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Plik ze stylami własnymi (opcjonalnie) -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Nawigacja (Navbar) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">eMobCAD</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Przełącz nawigację"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+</head>
+
+<body id = "content">
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">eMobCAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="lessons.html">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
 
     <!-- Nagłówek (Header) -->
     <header class="bg-primary text-white text-center py-5 mb-4">
       <div class="container">
-        <h1 class="mb-3">Lista Lekcji</h1>
-        <p class="lead">Sprawdź dostępne lekcje i rozpocznij naukę!</p>
+        
+
+        <h1 class="mb-3" data-lang="pl">Lista Lekcji</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">Available Lessons</h1>
+      <p class=" lead " data-lang="pl">
+        Sprawdź dostępne lekcje i rozpocznij naukę!
+       </p>
+      <p class=" lead " data-lang="en" style="display:none;">
+      Check available lessons and start learning! </p>
       </div>
     </header>
 
     <!-- Główna zawartość strony -->
     <main class="container mb-5">
-      <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         W każdaj lekcji na platformie eMobCAD znajdziesz modele 3D, zdjęcia, szczegółowe rysunki techniczne i opisy różnorodnych podzespołów, które pozwolą Ci lepiej zrozumieć tajniki elektromobilności.
 
 
       </p>
-      <p class="text-justify" style="text-align: justify; line-height: 1.8;">Co więcej, możesz pobrać modele na swój komputer i oglądać je, odkrywając każdy detal. A jeśli czujesz się na siłach, spróbuj samodzielnie otworzyć model w oprogramowaniu CAD i wcielić się w rolę projektanta! To nie tylko nauka, ale także okazja do rozwijania praktycznych umiejętności w środowisku profesjonalnych narzędzi. 🚗🔧</p>
+
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        In every lesson on the eMobCAD platform, you will find 3D models, photos, detailed technical drawings, and descriptions of various components, which will help you better understand the intricacies of electromobility.
+    </p>
+    
+    <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
+      Co więcej, możesz pobrać modele na swój komputer i oglądać je, odkrywając każdy detal. A jeśli czujesz się na siłach, spróbuj samodzielnie otworzyć model w oprogramowaniu CAD i wcielić się w rolę projektanta! To nie tylko nauka, ale także okazja do rozwijania praktycznych umiejętności w środowisku profesjonalnych narzędzi. 🚗🔧
+
+    </p>
+
+    <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+      Moreover, you can download the models to your computer and view them, discovering every detail. And if you feel up to it, try opening the model yourself in CAD software and take on the role of a designer! It's not just learning, but also an opportunity to develop practical skills in a professional tool environment. 🚗🔧
+    </p>
       <!-- Lista lekcji -->
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span> Lekcja pierwsza - Elektryczna nagrzewnica wodna</span>
-          <a href="lesson1.html" class="btn btn-primary">Lekcja 1</a>
+          <span data-lang="pl"> Lekcja pierwsza - Elektryczna nagrzewnica wodna</span>
+          <span data-lang="en" style="display:none;"> First lesson - Electric heater</span>
+          <a href="lesson1.html" class="btn btn-primary" data-lang="pl">Lekcja 1</a>
+          <a href="lesson1.html" class="btn btn-primary" data-lang="en" style="display:none;">Lesson 1</a>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span> Lekcja druga - Gniazdo ładowania CCS Type 2</span>
-          <a href="lesson2.html" class="btn btn-primary">Lekcja 2</a>
+          <span data-lang="pl"> Lekcja druga - Gniazdo ładowania CCS Type 2</span>
+          <span data-lang="en" style="display:none;"> Second lesson - CCS Type 2 charging port</span>
+          <a href="lesson2.html" class="btn btn-primary" data-lang="pl">Lekcja 2</a>
+          <a href="lesson2.html" class="btn btn-primary" data-lang="en" style="display:none;">Lesson 2</a>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span> Lekcja trzecia - AVAS (Acoustic Vehicle Alerting System)</span>
-          <a href="lesson3.html" class="btn btn-primary">Lekcja 3</a>
+          <span data-lang="pl"> Lekcja trzecia - AVAS (Acoustic Vehicle Alerting System)</span>
+          <span data-lang="en" style="display:none;"> Third lesson - AVAS (Acoustic Vehicle Alerting System)</span>
+          <a href="lesson3.html" class="btn btn-primary" data-lang="pl">Lekcja 3</a>
+          <a href="lesson3.html" class="btn btn-primary" data-lang="en" style="display:none;">Lesson 3</a>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span> Lekcja czwarta - Ogniwo bateryjne</span>
-          <a href="lesson4.html" class="btn btn-primary">Lekcja 4</a>
+          <span data-lang="pl"> Lekcja czwarta - Ogniwo bateryjne</span>
+          <span data-lang="en" style="display:none;"> Fourth lesson - Battery cell</span>
+          <a href="lesson4.html" class="btn btn-primary" data-lang="pl">Lekcja 4</a>
+          <a href="lesson4.html" class="btn btn-primary" data-lang="en" style="display:none;">Lesson 4</a>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span> Lekcja piąta - Superkondensator</span>
-          <a href="lesson5.html" class="btn btn-primary">Lekcja 5</a>
+          <span data-lang="pl"> Lekcja piąta - Superkondensator</span>
+          <span data-lang="en" style="display:none;"> Fifth lesson - Supercapacitor</span>
+          <a href="lesson5.html" class="btn btn-primary" data-lang="pl">Lekcja 5</a>
+          <a href="lesson5.html" class="btn btn-primary" data-lang="en" style="display:none;">Lesson 5</a>
         </li>
         
       </ul>

@@ -7,11 +7,14 @@
   <title>Ogniwo bateryjne - Lekcja 4</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body id = "content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -21,29 +24,45 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
-          </li>
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+            </li>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
         </ul>
-      </div>
+    </div>
     </div>
   </nav>
 
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
-      <h1 class="mb-3">Ogniwo bateryjne</h1>
-      <p class="lead text-justify" style="text-align: justify; line-height: 1.8;">
+      
+      <h1 class="mb-3" data-lang="pl">Ogniwo bateryjne</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">Battery cell</h1>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         Ogniwo bateryjne to podstawowy element akumulatora stosowanego w pojazdach elektrycznych, pełniący rolę
         magazynu energii elektrycznej. Składa się z elektrody dodatniej (katody), elektrody ujemnej (anody) oraz
         elektrolitu umożliwiającego przepływ jonów. Dzięki procesowi elektrochemicznemu ogniwo bateryjne zamienia
         energię chemiczną w energię elektryczną, dostarczając zasilanie do silnika elektrycznego i innych systemów
         pojazdu. Współczesne ogniwa, takie jak litowo-jonowe, charakteryzują się wysoką gęstością energii, długą
         żywotnością oraz efektywnością w ładowaniu i rozładowywaniu.
+      </p>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        Battery Cell is a fundamental component of the accumulator used in electric vehicles, serving as a storage for electrical energy. It consists of a positive electrode (cathode), a negative electrode (anode), and an electrolyte that allows ion flow. Through the electrochemical process, the battery cell converts chemical energy into electrical energy, supplying power to the electric motor and other vehicle systems. Modern cells, such as lithium-ion, are characterized by high energy density, long lifespan, and efficiency in charging and discharging.
       </p>
     </div>
   </header>
@@ -55,8 +74,13 @@
         <div class="text-center m-4">
           <img src="ogniwo/ogniwo.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
             style="width: 100%; height: 500px; object-fit: cover;" />
-          <figcaption class="text-muted mt-2">
+          
+          <figcaption class="text-muted mt-2" data-lang="pl">
             Interaktywny model 3D ogniwa bateryjnego
+          </figcaption>
+         
+          <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
+            Interactive 3D Model of a Battery cell
           </figcaption>
 
         </div>
@@ -118,36 +142,24 @@
 
 
 
-    <a href="ogniwo.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+    <a href="ogniwo.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
       Pobierz model 3D
-    </a>
-    <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+    </a> 
+    <a href="ogniwo.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Download 3D model
+    </a> 
+    <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
+    <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
 
-    <div>
-      <div id="hiddenDiv">
-        <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-        <embed src="ogniwo/ogniwo-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+<div>
+<div id="hiddenDiv">
+<!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+<embed src="ogniwo/ogniwo-rysunek.pdf" type="application/pdf" width="70%" height="600px">
 
-      </div>
-
-      <script>
-        const button = document.getElementById('toggleButton');
-        const div = document.getElementById('hiddenDiv');
-
-        button.addEventListener('click', () => {
-          // Sprawdzamy, czy sekcja jest widoczna
-          if (div.style.display === 'none' || div.style.display === '') {
-            div.style.display = 'block'; // Pokazujemy sekcję
-            button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
-          } else {
-            div.style.display = 'none'; // Ukrywamy sekcję
-            button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
-          }
-        });
-      </script>
+</div>
 
       <!-- Sekcja Budowa fizyczna -->
-      <section class="mb-4">
+      <section class="mb-4" data-lang="pl">
         <h2 class="m-3 text-center">Budowa fizyczna</h2>
         <table class="table table-bordered text-center">
           <thead class="table-light">
@@ -184,7 +196,7 @@
         </table>
       </section>
 
-      <section class="mb-4">
+      <section class="mb-4" data-lang="pl">
         <h2 class="m-3 text-center">Działanie ogniwa</h2>
         <p class="text-justify" style="text-align: justify; line-height: 1.8;">
           Ogniwo bateryjne działa na zasadzie reakcji elektrochemicznych zachodzących między anodą i katodą, z udziałem elektrolitu. 
@@ -194,7 +206,7 @@
       </section>
 
       <!-- Sekcja Zalety i wady -->
-      <section class="mb-4">
+      <section class="mb-4" data-lang="pl">
         <h2 class="m-3 text-center">Zalety i wady</h2>
         <table class="table table-bordered text-center">
           <thead class="table-light">
@@ -229,6 +241,88 @@
           </tbody>
         </table>
       </section>
+
+      <!-- Physical Construction Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Physical Construction</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cathode</td>
+        <td>Positive electrode made of materials such as metal oxides (e.g., lithium-cobalt).</td>
+      </tr>
+      <tr>
+        <td>Anode</td>
+        <td>Negative electrode, most commonly graphite, storing lithium ions during charging.</td>
+      </tr>
+      <tr>
+        <td>Electrolyte</td>
+        <td>Ion conductor in the form of liquid, gel, or solid, allowing ion flow between anode and cathode.</td>
+      </tr>
+      <tr>
+        <td>Separator</td>
+        <td>Thin insulating layer preventing contact between anode and cathode, while allowing ion flow.</td>
+      </tr>
+      <tr>
+        <td>Housing</td>
+        <td>Hermetic enclosure protecting the cell from mechanical damage and environmental conditions.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Cell Operation Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Cell Operation</h2>
+  <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+    A battery cell operates based on electrochemical reactions occurring between the anode and cathode, involving the electrolyte.
+    <br><strong>Charging:</strong> During charging, lithium ions move from the cathode to the anode through the electrolyte, storing chemical energy.
+    <br><strong>Discharging:</strong> During operation, ions move back from the anode to the cathode, generating an electron flow that powers electrical devices.
+  </p>
+</section>
+
+<!-- Advantages and Disadvantages Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Advantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>High energy density, enabling longer vehicle range.</li>
+            <li>Multiple charge and discharge cycles without significant capacity loss.</li>
+            <li>No emission of harmful substances during operation.</li>
+            <li>Compact construction and ability to adapt shape to vehicle design.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Disadvantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>High production cost of lithium-ion cells.</li>
+            <li>Limited durability under extreme temperatures.</li>
+            <li>Risk of overheating and damage in case of improper use.</li>
+            <li>Need for recycling and specialized processing.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
 
 

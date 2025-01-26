@@ -7,11 +7,14 @@
   <title>Superkondensator - Lekcja 5</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body id = "content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -21,25 +24,41 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
-          </li>
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+            </li>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
         </ul>
-      </div>
+    </div>
     </div>
   </nav>
 
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
-      <h1 class="mb-3">Superkondensator</h1>
-      <p class="lead text-justify" style="text-align: justify; line-height: 1.8;">
+      
+      <h1 class="mb-3" data-lang="pl">Superkondensator</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">Supercapacitor</h1>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         Superkondensator, znany również jako ultrakondensator, to urządzenie magazynujące energię, które łączy właściwości kondensatorów i baterii. Charakteryzuje się wysoką gęstością mocy, szybkim czasem ładowania i wyjątkową trwałością cykliczną. W przeciwieństwie do baterii, superkondensatory przechowują energię w postaci pola elektrostatycznego, a nie w wyniku reakcji chemicznych, co pozwala na natychmiastowy przepływ energii. 
+      
       </p>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        Supercapacitor, also known as an ultracapacitor, is an energy storage device that combines the properties of capacitors and batteries. It is characterized by high power density, rapid charging time, and exceptional cycle durability. Unlike batteries, supercapacitors store energy in the form of an electrostatic field rather than through chemical reactions, allowing for the immediate flow of energy. </p>
     </div>
   </header>
 
@@ -50,8 +69,13 @@
         <div class="text-center m-4">
           <img src="superkondensator/superkondensator.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
             style="width: 100%; height: 500px; object-fit: cover;" />
-          <figcaption class="text-muted mt-2">
+          
+          <figcaption class="text-muted mt-2" data-lang="pl">
             Interaktywny model 3D superkondensatora
+          </figcaption>
+         
+          <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
+            Interactive 3D Model of a Supercapacitor
           </figcaption>
 
         </div>
@@ -105,36 +129,24 @@
 
 
 
-    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
       Pobierz model 3D
-    </a>
-    <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+    </a> 
+    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Download 3D model
+    </a> 
+    <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
+    <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
 
-    <div>
-      <div id="hiddenDiv">
-        <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-        <embed src="superkondensator/superkondensator-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+<div>
+<div id="hiddenDiv">
+<!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+<embed src="superkondensator/superkondensator-rysunek.pdf" type="application/pdf" width="70%" height="600px">
 
-      </div>
-
-      <script>
-        const button = document.getElementById('toggleButton');
-        const div = document.getElementById('hiddenDiv');
-
-        button.addEventListener('click', () => {
-          // Sprawdzamy, czy sekcja jest widoczna
-          if (div.style.display === 'none' || div.style.display === '') {
-            div.style.display = 'block'; // Pokazujemy sekcję
-            button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
-          } else {
-            div.style.display = 'none'; // Ukrywamy sekcję
-            button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
-          }
-        });
-      </script>
+</div>
 
 
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Zastosowania</h2>
   <p class="text-justify" style="text-align: justify; line-height: 1.8;">
     Superkondensatory znajdują szerokie zastosowanie w obszarach wymagających szybkiego ładowania i dostawy energii. Wykorzystywane są w pojazdach elektrycznych do wspomagania baterii, w systemach rekuperacji energii (np. w hamulcach regeneracyjnych) oraz w aplikacjach takich jak zasilanie awaryjne, stabilizacja napięcia czy urządzenia przenośne. Dzięki swoim właściwościom są idealne w sytuacjach, gdzie wymagana jest wysoka gęstość mocy i trwałość cykliczna.
@@ -142,7 +154,7 @@
 </section>
 
 <!-- Sekcja Budowa fizyczna -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Budowa fizyczna</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -173,7 +185,7 @@
 </section>
 
 <!-- Sekcja Zalety i wady -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Zalety i wady</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -207,6 +219,82 @@
     </tbody>
   </table>
 </section>
+
+<!-- Applications Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Applications</h2>
+  <p class="text-justify" style="text-align: justify; line-height: 1.8;">
+    Supercapacitors are widely used in areas that require fast charging and energy delivery. They are utilized in electric vehicles to support batteries, in energy recuperation systems (e.g., regenerative braking), and in applications such as emergency power supply, voltage stabilization, and portable devices. Thanks to their properties, they are ideal in situations where high power density and cycle durability are required.
+  </p>
+</section>
+
+<!-- Physical Construction Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Physical Construction</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Electrodes</td>
+        <td>Made from materials with high specific surface area, such as activated carbon, providing large capacitance.</td>
+      </tr>
+      <tr>
+        <td>Separator</td>
+        <td>Thin membrane separating the electrodes, allowing ion passage while electrically insulating them.</td>
+      </tr>
+      <tr>
+        <td>Electrolyte</td>
+        <td>Liquid or solid, enabling ion flow between the electrodes.</td>
+      </tr>
+      <tr>
+        <td>Housing</td>
+        <td>Hermetic construction protecting against external factors and maintaining structural stability.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Advantages and Disadvantages Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Advantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>High power density, enabling rapid charging and discharging.</li>
+            <li>Exceptional durability – millions of charge and discharge cycles.</li>
+            <li>No chemical reactions, minimizing material degradation.</li>
+            <li>Environmentally friendly – no toxic materials.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Disadvantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Low energy density compared to batteries.</li>
+            <li>Expensive materials and production technologies.</li>
+            <li>Self-discharge – energy is lost more quickly during idle periods.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
 <!-- Sekcja Zastosowania -->
 

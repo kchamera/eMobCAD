@@ -7,11 +7,14 @@
   <title>AVAS - Lekcja 3</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body id = "content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -21,25 +24,42 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
-          </li>
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+            </li>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
         </ul>
-      </div>
+    </div>
     </div>
   </nav>
 
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
-      <h1 class="mb-3">AVAS (Acoustic Vehicle Alerting System)</h1>
-      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;">
+      
+      <h1 class="mb-3" data-lang="pl">AVAS (Acoustic Vehicle Alerting System)</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">AVAS (Acoustic Vehicle Alerting System)</h1>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         Acoustic Vehicle Alerting System (AVAS) to system akustyczny, który został wprowadzony w odpowiedzi na rosnącą liczbę pojazdów elektrycznych i hybrydowych charakteryzujących się bardzo cichą pracą. System ten emituje sztuczny dźwięk podczas poruszania się pojazdu przy niskich prędkościach, co zwiększa bezpieczeństwo pieszych, rowerzystów oraz innych uczestników ruchu drogowego. AVAS jest szczególnie istotny w miejscach o dużym natężeniu ruchu pieszych, takich jak miasta czy osiedla mieszkaniowe, gdzie tradycyjny dźwięk silnika spalinowego odgrywał rolę ostrzegawczą.
       </p>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        Acoustic Vehicle Alerting System (AVAS) is an acoustic system introduced in response to the increasing number of electric and hybrid vehicles characterized by very quiet operation. This system emits an artificial sound while the vehicle is moving at low speeds, enhancing the safety of pedestrians, cyclists, and other road users. AVAS is particularly important in areas with high pedestrian traffic, such as cities or residential neighborhoods, where the traditional sound of a combustion engine served as a warning signal.</p>
+    
+
     </div>
   </header>
 
@@ -50,8 +70,13 @@
         <div class="text-center m-4" >
           <img src="avas/avas.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
                   style="width: 100%; height: 500px; object-fit: cover;" />
-                  <figcaption class="text-muted mt-2">
+                 
+                  <figcaption class="text-muted mt-2" data-lang="pl">
                     Interaktywny model 3D AVAS
+                  </figcaption>
+                 
+                  <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
+                    Interactive 3D Model of AVAS
                   </figcaption>
           
         </div>
@@ -113,38 +138,28 @@
 
     
 
-    <a href="avas.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
-            Pobierz model 3D
-          </a> 
-          <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
     
-    <div>
-      <div id="hiddenDiv">
-      <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-      <embed src="avas/avas-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+    <a href="avas.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
+      Pobierz model 3D
+    </a> 
+    <a href="avas.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Download 3D model
+    </a> 
+    <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
+    <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
 
-    </div>
+<div>
+<div id="hiddenDiv">
+<!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
+<embed src="avas/avas-rysunek.pdf" type="application/pdf" width="70%" height="600px">
 
-    <script>
-      const button = document.getElementById('toggleButton');
-      const div = document.getElementById('hiddenDiv');
+</div>
 
-      button.addEventListener('click', () => {
-        // Sprawdzamy, czy sekcja jest widoczna
-        if (div.style.display === 'none' || div.style.display === '') {
-          div.style.display = 'block'; // Pokazujemy sekcję
-          button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
-        } else {
-          div.style.display = 'none'; // Ukrywamy sekcję
-          button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
-        }
-      });
-    </script>
 
 
 
 <!-- Sekcja Budowa fizyczna -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Budowa fizyczna</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -175,7 +190,7 @@
 </section>
 
 <!-- Sekcja Zalety i wady -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Zalety i wady</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -203,6 +218,73 @@
             <li>Dodatkowy koszt produkcji i implementacji w pojazdach.</li>
             <li>Może być odbierany jako irytujący w cichych miejscach.</li>
             <li>Konieczność utrzymania systemu w odpowiednim stanie technicznym.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Physical Construction Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Physical Construction</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sound Module</td>
+        <td>Generates sound at the appropriate frequency and intensity, tailored to regulatory requirements.</td>
+      </tr>
+      <tr>
+        <td>Speakers</td>
+        <td>Typically located at the front of the vehicle, emitting sound towards the surroundings.</td>
+      </tr>
+      <tr>
+        <td>Controller</td>
+        <td>Responsible for activating the system based on the vehicle's speed and driving conditions.</td>
+      </tr>
+      <tr>
+        <td>Power Source</td>
+        <td>Connected to the vehicle's main electrical system, ensuring uninterrupted operation of the system.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Advantages and Disadvantages Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Advantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Enhances the safety of pedestrians and cyclists.</li>
+            <li>Mandatory in many countries, compliant with international regulations.</li>
+            <li>Minimal impact on the vehicle's energy consumption.</li>
+            <li>Ability to customize sounds in some models.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Disadvantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Additional cost for production and implementation in vehicles.</li>
+            <li>May be perceived as annoying in quiet areas.</li>
+            <li>Requires maintenance to keep the system in proper technical condition.</li>
           </ul>
         </td>
       </tr>

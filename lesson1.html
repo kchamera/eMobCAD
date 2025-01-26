@@ -7,39 +7,58 @@
   <title>Elektryczna nagrzewnica wodna - Lekcja 1</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
 </head>
 
-<body>
+<body id="content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">eMobCAD</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lessons.html">Lekcje</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="index.html">eMobCAD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                    <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
+                    <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+                </li>
+                <li >
+                  <i class="bi bi-globe" ></i>
+                </li>
+                <li class="nav-item"></li>
+                    <select id="language-select" class="form-select ms-3" style="color: #333;">
+                        <option value="pl">Polski</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
+  
 
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
-      <h1 class="mb-3">Nagrzewnica elektryczna</h1>
-      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;">
+      <h1 class="mb-3" data-lang="pl">Nagrzewnica elektryczna</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">Electric heater</h1>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         Nagrzewnica elektryczna to kluczowy element systemu ogrzewania w pojazdach elektrycznych, zastępujący tradycyjne nagrzewnice wykorzystujące ciepło z silnika spalinowego. Urządzenie to przekształca energię elektryczną bezpośrednio w ciepło, co pozwala na szybkie i efektywne ogrzewanie wnętrza pojazdu nawet przy niskich temperaturach zewnętrznych. Dzięki precyzyjnemu sterowaniu, nagrzewnica elektryczna zapewnia optymalny komfort termiczny pasażerom, jednocześnie minimalizując zużycie energii. Jest to rozwiązanie przyjazne środowisku, idealnie wpisujące się w założenia zrównoważonej mobilności.
       </p>
+      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+      An electric heater is a key component of the heating system in electric vehicles, replacing traditional heaters that utilize heat from an internal combustion engine. This device converts electrical energy directly into heat, enabling quick and efficient cabin heating even at low external temperatures. With precise control, the electric heater ensures optimal thermal comfort for passengers while minimizing energy consumption. It is an environmentally friendly solution, perfectly aligned with the principles of sustainable mobility.
+    </p>
     </div>
   </header>
 
@@ -50,8 +69,12 @@
         <div class="text-center m-4" >
           <img src="nagrzewnica/nagrzewnica.gif" class="img-fluid d-block mx-auto" alt="Nagrzewnica 1"
                   style="width: 100%; height: auto; object-fit: cover;" />
-                  <figcaption class="text-muted mt-2">
+                  <figcaption class="text-muted mt-2" data-lang="pl">
                     Interaktywny model 3D nagrzewnicy elektrycznej
+                  </figcaption>
+                 
+                  <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
+                    Interactive 3D Model of an Electric Heater
                   </figcaption>
           
         </div>
@@ -113,10 +136,14 @@
 
     
 
-    <a href="nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;">
+    <a href="nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
             Pobierz model 3D
           </a> 
-          <a id="toggleButton" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;">Pokaż wymiary</a>
+          <a href="nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+            Download 3D model
+          </a> 
+          <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
+          <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
     
     <div>
       <div id="hiddenDiv">
@@ -125,28 +152,13 @@
 
     </div>
 
-    <script>
-      const button = document.getElementById('toggleButton');
-      const div = document.getElementById('hiddenDiv');
-
-      button.addEventListener('click', () => {
-        // Sprawdzamy, czy sekcja jest widoczna
-        if (div.style.display === 'none' || div.style.display === '') {
-          div.style.display = 'block'; // Pokazujemy sekcję
-          button.textContent = 'Ukryj wymiary'; // Zmieniamy tekst przycisku
-        } else {
-          div.style.display = 'none'; // Ukrywamy sekcję
-          button.textContent = 'Pokaż wymiary'; // Zmieniamy tekst przycisku
-        }
-      });
-    </script>
 
 
 
 
 
 <!-- Sekcja Budowa fizyczna -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Budowa fizyczna</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -177,7 +189,7 @@
 </section>
 
 <!-- Sekcja Zalety i wady -->
-<section class="mb-4">
+<section class="mb-4" data-lang="pl">
   <h2 class="m-3 text-center">Zalety i wady</h2>
   <table class="table table-bordered text-center">
     <thead class="table-light">
@@ -204,6 +216,71 @@
           <ul class="list-unstyled text-start m-0 p-0">
             <li>Wyższe zapotrzebowanie na energię w porównaniu do nagrzewnic pasywnych.</li>
             <li>Potrzeba zaawansowanego systemu zarządzania energią w pojeździe.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Physical Structure</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Heating Element</td>
+        <td>Resistive heater or PTC.</td>
+      </tr>
+      <tr>
+        <td>Housing</td>
+        <td>Metal, with an anti-corrosion coating.</td>
+      </tr>
+      <tr>
+        <td>Controller</td>
+        <td>Electronic module controlling power and temperature.</td>
+      </tr>
+      <tr>
+        <td>Protections</td>
+        <td>Thermal and electrical, including fuses and thermostats.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Advantages and Disadvantages Section -->
+<section class="mb-4" data-lang="en" style="display:none;">
+  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Advantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Fast and efficient heating.</li>
+            <li>Environmentally friendly.</li>
+            <li>Easy control and precise temperature regulation.</li>
+            <li>Minimal energy loss.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Disadvantages</td>
+        <td>
+          <ul class="list-unstyled text-start m-0 p-0">
+            <li>Higher energy consumption compared to passive heaters.</li>
+            <li>Need for an advanced energy management system in the vehicle.</li>
           </ul>
         </td>
       </tr>
