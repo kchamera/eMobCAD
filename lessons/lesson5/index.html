@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Superkondensator - Lekcja 5</title>
+  <title>Elektryczna nagrzewnica wodna - Lekcja 1</title>
   <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../script.js" defer></script>
 
 </head>
 
@@ -18,7 +18,12 @@
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">eMobCAD</a>
+      <a class="navbar-brand" href="/">eMobCAD</a>
+      <a  href="https://www.ee.pw.edu.pl/" target="_blank" rel="noopener noreferrer"> 
+        <img src="/emblemat.png" class="img-fluid mx-auto d-block" style="width: 70px; height: auto;"> 
+      </a>
+      
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
         <span class="navbar-toggler-icon"></span>
@@ -26,13 +31,17 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
-                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
-                <a class="nav-link" href="index.html" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+                <a class="nav-link" href="../../" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+                <a class="nav-link" href="../../" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="lessons.html" data-lang="pl">Lekcje</a>
-                <a class="nav-link" href="lessons.html" data-lang="en" style="display:none;">Lessons</a>
+                <a class="nav-link" href="/lessons/" data-lang="pl" >Lekcje</a>
+                <a class="nav-link" href="/lessons/" data-lang="en" style="display:none;">Lessons</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/" style="white-space: nowrap;" data-lang="pl" >O platformie</a>
+              <a class="nav-link" href="../../about/" style="white-space: nowrap;" data-lang="en" style="display:none;">About the platform</a>
+          </li>
             <li >
               <i class="bi bi-globe" ></i>
             </li>
@@ -67,7 +76,7 @@
     <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; align-items: center; justify-content: center;">
       <div class="box">
         <div class="text-center m-4">
-          <img src="superkondensator/superkondensator.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
+          <img src="../../superkondensator/superkondensator.gif" class="img-fluid d-block mx-auto" alt="AVAS 1"
             style="width: 100%; height: 500px; object-fit: cover;" />
           
           <figcaption class="text-muted mt-2" data-lang="pl">
@@ -90,19 +99,19 @@
               <!-- Drugi slajd -->
 
               <div class="carousel-item active">
-                <img src="superkondensator/superkondensator1.png" class="img-fluid d-block mx-auto" alt="AVas 2"
+                <img src="../../superkondensator/superkondensator1.png" class="img-fluid d-block mx-auto" alt="AVas 2"
                   style="width: 70%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="superkondensator/superkondensator2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                <img src="../../superkondensator/superkondensator2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
                   style="width: 70%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="superkondensator/superkondensator3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                <img src="../../superkondensator/superkondensator3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
                   style="width: 70%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="superkondensator/superkondensator4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                <img src="../../superkondensator/superkondensator4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
                   style="width: 70%; height: auto; object-fit: cover;" />
               </div>
               
@@ -129,10 +138,10 @@
 
 
 
-    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
+    <a href="../../superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
       Pobierz model 3D
     </a> 
-    <a href="superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+    <a href="../../superkondensator.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
       Download 3D model
     </a> 
     <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
@@ -141,7 +150,7 @@
 <div>
 <div id="hiddenDiv">
 <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-<embed src="superkondensator/superkondensator-rysunek.pdf" type="application/pdf" width="70%" height="600px">
+<embed src="../../superkondensator/superkondensator-rysunek.pdf" type="application/pdf" width="70%" height="600px">
 
 </div>
 
@@ -309,7 +318,7 @@
   </main>
 
   <!-- Stopka (Footer) -->
-  <footer class="bg-light text-center py-3">
+  <footer class=" text-center py-3">
     <div class="container">
       <small class="text-muted">&copy; 2025 eMobCAD</small>
     </div>

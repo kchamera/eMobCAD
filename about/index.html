@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O platformie</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+
+</head>
+
+<body id = "content">
+  <!-- Nawigacja (Navbar) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="../">eMobCAD</a>
+      <a  href="https://www.ee.pw.edu.pl/"> 
+        <img src="/emblemat.png" class="img-fluid mx-auto d-block" style="width: 70px; height: auto;"> 
+      </a>
+      
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+            <a class="nav-link" href="../" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../lessons/" data-lang="pl" >Lekcje</a>
+            <a class="nav-link" href="../lessons/" data-lang="en" style="display:none;">Lessons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about/" style="white-space: nowrap;" data-lang="pl" >O platformie</a>
+          <a class="nav-link" href="../about/" style="white-space: nowrap;" data-lang="en" style="display:none;">About the platform</a>
+      </li>
+            <li >
+              <i class="bi bi-globe" ></i>
+            </li>
+            <li class="nav-item"></li>
+                <select id="language-select" class="form-select ms-3" style="color: #333;">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
+
+    <!-- Nagłówek (Header) -->
+    <header class="bg-primary text-white text-center py-5 mb-4">
+      <div class="container">
+        
+
+        <h1 class="mb-3" data-lang="pl">O platformie</h1>
+      <h1 class="mb-3" data-lang="en" style="display:none;">About the platform</h1>
+
+      
+    
+      </div>
+    </header>
+
+    <!-- Główna zawartość strony -->
+    <main class="container mb-5">
+      
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
+        Platforma edukacyjna eMobCAD to nowatorskie narzędzie edukacyjne, opracowane wraz z zaimplementowanymi modelami jako część pracy inżynierskiej Kacpra Chamery na Politechnice Warszawskiej w 2025 roku. Projekt ten został stworzony w odpowiedzi na rosnące zapotrzebowanie na wiedzę z zakresu elektromobilności, oferując nowoczesne rozwiązania edukacyjne dla studentów, inżynierów oraz entuzjastów tego dynamicznie rozwijającego się obszaru.
+      </p>
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
+        W dobie dynamicznego rozwoju technologii elektrycznych i pojazdów elektrycznych, eMobCAD oferuje kompleksowe materiały edukacyjne, które łączą teorię z praktyką. Dzięki interaktywnym modelom 3D, szczegółowym rysunkom technicznym oraz obszernej dokumentacji, użytkownicy mogą dogłębnie zgłębić tajniki elektromobilności i zrozumieć działanie nowoczesnych podzespołów stosowanych w pojazdach elektrycznych.
+      </p>
+      
+      <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        The eMobCAD educational platform is an innovative educational tool, developed along with integrated models as part of Kacper Chamera's engineering project at the Warsaw University of Technology in 2025. This project was created in response to the growing demand for knowledge in the field of electromobility, offering modern educational solutions for students, engineers, and enthusiasts of this dynamically developing area.
+    </p>
+    <p class="text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        In the era of rapid advancements in electric technologies and electric vehicles, eMobCAD provides comprehensive educational materials that blend theory with practice. With interactive 3D models, detailed technical drawings, and extensive documentation, users can deeply explore the intricacies of electromobility and understand the operation of modern components used in electric vehicles.
+    </p>
+    
+    </main>
+    <!-- Stopka (Footer) -->
+    <footer class=" text-center py-3">
+      <div class="container">
+        <small class="text-muted">&copy; 2025 eMobCAD</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (z Popper do dropdownów, itp.) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
