@@ -1,3 +1,14 @@
+<?php
+// index.php
+session_start();
+
+// Sprawdź, czy użytkownik jest uwierzytelniony
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+    header('Location: auth.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
