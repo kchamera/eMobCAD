@@ -9,20 +9,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/kchamera/eMobCAD/refs/heads/main/style.css" />
-  <script src="https://raw.githubusercontent.com/kchamera/eMobCAD/refs/heads/main/script.js" defer></script>
+  <!-- Plik CSS z repozytorium (zamiast ../../style.css) -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/kchamera/eMobCAD/main/style.css" />
+
+  <!-- Plik JS z repozytorium (zamiast ../../script.js) -->
+  <script src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/script.js" defer></script>
 
 </head>
 
-<body id = "content">
+<body id="content">
   <!-- Nawigacja (Navbar) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="https://github.com/kchamera/eMobCAD">eMobCAD</a>
-      <a  href="https://www.ee.pw.edu.pl/" target="_blank" rel="noopener noreferrer"> 
+      <a href="https://www.ee.pw.edu.pl/" target="_blank" rel="noopener noreferrer"> 
         <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/emblemat.png" class="img-fluid mx-auto d-block" style="width: 70px; height: auto;"> 
       </a>
-      
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
@@ -30,44 +32,42 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/kchamera/eMobCAD" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
-                <a class="nav-link" href="https://github.com/kchamera/eMobCAD" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/kchamera/eMobCAD/lessons" data-lang="pl" >Lekcje</a>
-                <a class="nav-link" href="https://github.com/kchamera/eMobCAD/lessons" data-lang="en" style="display:none;">Lessons</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/kchamera/eMobCAD/about" style="white-space: nowrap;" data-lang="pl" >O platformie</a>
-              <a class="nav-link" href="https://github.com/kchamera/eMobCAD/about" style="white-space: nowrap;" data-lang="en" style="display:none;">About the platform</a>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD" style="white-space: nowrap;" data-lang="pl">Strona Główna</a>
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD" style="white-space: nowrap;" data-lang="en" style="display:none;">Home</a>
           </li>
-            <li >
-              <i class="bi bi-globe" ></i>
-            </li>
-            <li class="nav-item"></li>
-                <select id="language-select" class="form-select ms-3" style="color: #333;">
-                    <option value="pl">Polski</option>
-                    <option value="en">English</option>
-                </select>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD/lessons" data-lang="pl" >Lekcje</a>
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD/lessons" data-lang="en" style="display:none;">Lessons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD/about" style="white-space: nowrap;" data-lang="pl" >O platformie</a>
+            <a class="nav-link" href="https://github.com/kchamera/eMobCAD/about" style="white-space: nowrap;" data-lang="en" style="display:none;">About the platform</a>
+          </li>
+          <li >
+            <i class="bi bi-globe" ></i>
+          </li>
+          <li class="nav-item"></li>
+          <select id="language-select" class="form-select ms-3" style="color: #333;">
+            <option value="pl">Polski</option>
+            <option value="en">English</option>
+          </select>
         </ul>
-    </div>
+      </div>
     </div>
   </nav>
   
-
   <!-- Nagłówek (Header) -->
   <header class="bg-primary text-white text-center py-5 mb-4">
     <div class="container">
       <h1 class="mb-3" data-lang="pl">Nagrzewnica elektryczna</h1>
       <h1 class="mb-3" data-lang="en" style="display:none;">Electric heater</h1>
-      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
+      <p class="lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="pl">
         Nagrzewnica elektryczna to kluczowy element systemu ogrzewania w pojazdach elektrycznych, zastępujący tradycyjne nagrzewnice wykorzystujące ciepło z silnika spalinowego. Urządzenie to przekształca energię elektryczną bezpośrednio w ciepło, co pozwala na szybkie i efektywne ogrzewanie wnętrza pojazdu nawet przy niskich temperaturach zewnętrznych. Dzięki precyzyjnemu sterowaniu, nagrzewnica elektryczna zapewnia optymalny komfort termiczny pasażerom, jednocześnie minimalizując zużycie energii. Jest to rozwiązanie przyjazne środowisku, idealnie wpisujące się w założenia zrównoważonej mobilności.
       </p>
-      <p class=" lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
-      An electric heater is a key component of the heating system in electric vehicles, replacing traditional heaters that utilize heat from an internal combustion engine. This device converts electrical energy directly into heat, enabling quick and efficient cabin heating even at low external temperatures. With precise control, the electric heater ensures optimal thermal comfort for passengers while minimizing energy consumption. It is an environmentally friendly solution, perfectly aligned with the principles of sustainable mobility.
-    </p>
+      <p class="lead text-justify" style="text-align: justify; line-height: 1.8;" data-lang="en" style="display:none;">
+        An electric heater is a key component of the heating system in electric vehicles, replacing traditional heaters that utilize heat from an internal combustion engine. This device converts electrical energy directly into heat, enabling quick and efficient cabin heating even at low external temperatures. With precise control, the electric heater ensures optimal thermal comfort for passengers while minimizing energy consumption. It is an environmentally friendly solution, perfectly aligned with the principles of sustainable mobility.
+      </p>
     </div>
   </header>
 
@@ -75,17 +75,17 @@
   <main class="container mb-5">
     <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; align-items: center; justify-content: center;">
       <div class="box">
-        <div class="text-center m-4" >
-          <img src="../../nagrzewnica/nagrzewnica.gif" class="img-fluid d-block mx-auto" alt="Nagrzewnica 1"
-                  style="width: 100%; height: auto; object-fit: cover;" />
-                  <figcaption class="text-muted mt-2" data-lang="pl">
-                    Interaktywny model 3D nagrzewnicy elektrycznej
-                  </figcaption>
-                 
-                  <figcaption class="text-muted mt-2"  data-lang="en" style="display:none;">
-                    Interactive 3D Model of an Electric Heater
-                  </figcaption>
-          
+        <div class="text-center m-4">
+          <!-- Ścieżka do gifa z repozytorium -->
+          <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica.gif"
+               class="img-fluid d-block mx-auto" alt="Nagrzewnica 1"
+               style="width: 100%; height: auto; object-fit: cover;" />
+          <figcaption class="text-muted mt-2" data-lang="pl">
+            Interaktywny model 3D nagrzewnicy elektrycznej
+          </figcaption>
+          <figcaption class="text-muted mt-2" data-lang="en" style="display:none;">
+            Interactive 3D Model of an Electric Heater
+          </figcaption>
         </div>
       </div>
 
@@ -94,217 +94,214 @@
         <figure class="text-center mb-4">
           <div id="nagrzewnicaCarousel" class="carousel slide">
             <div class="carousel-inner">
-              
-              <!-- Drugi slajd -->
-
+              <!-- Slajdy z repozytorium -->
               <div class="carousel-item active">
-                <img src="../../nagrzewnica/nagrzewnica3.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica3.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="../../nagrzewnica/nagrzewnica4.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica4.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="../../nagrzewnica/nagrzewnica5.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica5.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="../../nagrzewnica/nagrzewnica6.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica6.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
               <div class="carousel-item">
-                <img src="../../nagrzewnica/nagrzewnica1.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica1.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
-              <!-- Trzeci slajd -->
               <div class="carousel-item">
-                <img src="../../nagrzewnica/nagrzewnica2.png" class="img-fluid d-block mx-auto" alt="Nagrzewnica 2" 
-                style="width: 100%; height: auto; object-fit: cover;" />
+                <img src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica2.png"
+                     class="img-fluid d-block mx-auto" alt="Nagrzewnica 2"
+                     style="width: 100%; height: auto; object-fit: cover;" />
               </div>
             </div>
             <!-- Przyciski karuzeli -->
             <button class="carousel-control-prev" type="button" data-bs-target="#nagrzewnicaCarousel"
-              data-bs-slide="prev">
+                    data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Poprzedni</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#nagrzewnicaCarousel"
-              data-bs-slide="next">
+                    data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Następny</span>
             </button>
           </div>
-
         </figure>
       </div>
-      
     </div>
 
-    
+    <!-- Link do pobrania modelu z repozytorium -->
+    <a href="https://github.com/kchamera/eMobCAD/raw/main/nagrzewnica/nagrzewnica.zip"
+       class="btn btn-success btn-primary m-3" download style="width: auto; height: auto;" data-lang="pl">
+      Pobierz model 3D
+    </a>
+    <a href="https://github.com/kchamera/eMobCAD/raw/main/nagrzewnica/nagrzewnica.zip"
+       class="btn btn-success btn-primary m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Download 3D model
+    </a>
 
-    
-
-    <a href="../../nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="pl">
-            Pobierz model 3D
-          </a> 
-          <a href="../../nagrzewnica.zip" class="btn btn-success btn-primary  m-3" download style="width: auto; height: auto;" data-lang="en" style="display:none;">
-            Download 3D model
-          </a> 
-          <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">Pokaż wymiary</a>
-          <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">Show dimensions</a>
+    <a id="toggleButton-pl" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="pl">
+      Pokaż wymiary
+    </a>
+    <a id="toggleButton-en" class="btn btn-success btn-primary m-3" style="width: auto; height: auto;" data-lang="en" style="display:none;">
+      Show dimensions
+    </a>
     
     <div>
       <div id="hiddenDiv">
-      <!-- Zamień "plik-do-pobrania.zip" na właściwą ścieżkę do pliku -->
-      <embed src="../../nagrzewnica/nagrzewnica-schemat.pdf" type="application/pdf" width="70%" height="600px">
-
+        <!-- Osadzony PDF z repozytorium -->
+        <embed src="https://raw.githubusercontent.com/kchamera/eMobCAD/main/nagrzewnica/nagrzewnica-schemat.pdf"
+               type="application/pdf" width="70%" height="600px">
+      </div>
     </div>
 
+    <!-- Sekcja Budowa fizyczna (PL) -->
+    <section class="mb-4" data-lang="pl">
+      <h2 class="m-3 text-center">Budowa fizyczna</h2>
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Element</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Element grzewczy</td>
+            <td>Grzałka rezystancyjna lub PTC.</td>
+          </tr>
+          <tr>
+            <td>Obudowa</td>
+            <td>Metalowa, z powłoką antykorozyjną.</td>
+          </tr>
+          <tr>
+            <td>Sterownik</td>
+            <td>Elektroniczny moduł sterujący mocą i temperaturą.</td>
+          </tr>
+          <tr>
+            <td>Zabezpieczenia</td>
+            <td>Termiczne i elektryczne, w tym bezpieczniki i termostaty.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
+    <!-- Sekcja Zalety i wady (PL) -->
+    <section class="mb-4" data-lang="pl">
+      <h2 class="m-3 text-center">Zalety i wady</h2>
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Kategoria</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Zalety</td>
+            <td>
+              <ul class="list-unstyled text-start m-0 p-0">
+                <li>Szybkie i efektywne ogrzewanie.</li>
+                <li>Przyjazne środowisku.</li>
+                <li>Łatwe sterowanie i precyzyjna regulacja temperatury.</li>
+                <li>Minimalne straty energii.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Wady</td>
+            <td>
+              <ul class="list-unstyled text-start m-0 p-0">
+                <li>Wyższe zapotrzebowanie na energię w porównaniu do nagrzewnic pasywnych.</li>
+                <li>Potrzeba zaawansowanego systemu zarządzania energią w pojeździe.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
+    <!-- Sekcja Physical Structure (EN) -->
+    <section class="mb-4" data-lang="en" style="display:none;">
+      <h2 class="m-3 text-center">Physical Structure</h2>
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Heating Element</td>
+            <td>Resistive heater or PTC.</td>
+          </tr>
+          <tr>
+            <td>Housing</td>
+            <td>Metal, with an anti-corrosion coating.</td>
+          </tr>
+          <tr>
+            <td>Controller</td>
+            <td>Electronic module controlling power and temperature.</td>
+          </tr>
+          <tr>
+            <td>Protections</td>
+            <td>Thermal and electrical, including fuses and thermostats.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-
-
-<!-- Sekcja Budowa fizyczna -->
-<section class="mb-4" data-lang="pl">
-  <h2 class="m-3 text-center">Budowa fizyczna</h2>
-  <table class="table table-bordered text-center">
-    <thead class="table-light">
-      <tr>
-        <th>Element</th>
-        <th>Opis</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Element grzewczy</td>
-        <td>Grzałka rezystancyjna lub PTC.</td>
-      </tr>
-      <tr>
-        <td>Obudowa</td>
-        <td>Metalowa, z powłoką antykorozyjną.</td>
-      </tr>
-      <tr>
-        <td>Sterownik</td>
-        <td>Elektroniczny moduł sterujący mocą i temperaturą.</td>
-      </tr>
-      <tr>
-        <td>Zabezpieczenia</td>
-        <td>Termiczne i elektryczne, w tym bezpieczniki i termostaty.</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- Sekcja Zalety i wady -->
-<section class="mb-4" data-lang="pl">
-  <h2 class="m-3 text-center">Zalety i wady</h2>
-  <table class="table table-bordered text-center">
-    <thead class="table-light">
-      <tr>
-        <th>Kategoria</th>
-        <th>Opis</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Zalety</td>
-        <td>
-          <ul class="list-unstyled text-start m-0 p-0">
-            <li>Szybkie i efektywne ogrzewanie.</li>
-            <li>Przyjazne środowisku.</li>
-            <li>Łatwe sterowanie i precyzyjna regulacja temperatury.</li>
-            <li>Minimalne straty energii.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>Wady</td>
-        <td>
-          <ul class="list-unstyled text-start m-0 p-0">
-            <li>Wyższe zapotrzebowanie na energię w porównaniu do nagrzewnic pasywnych.</li>
-            <li>Potrzeba zaawansowanego systemu zarządzania energią w pojeździe.</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section class="mb-4" data-lang="en" style="display:none;">
-  <h2 class="m-3 text-center">Physical Structure</h2>
-  <table class="table table-bordered text-center">
-    <thead class="table-light">
-      <tr>
-        <th>Element</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Heating Element</td>
-        <td>Resistive heater or PTC.</td>
-      </tr>
-      <tr>
-        <td>Housing</td>
-        <td>Metal, with an anti-corrosion coating.</td>
-      </tr>
-      <tr>
-        <td>Controller</td>
-        <td>Electronic module controlling power and temperature.</td>
-      </tr>
-      <tr>
-        <td>Protections</td>
-        <td>Thermal and electrical, including fuses and thermostats.</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- Advantages and Disadvantages Section -->
-<section class="mb-4" data-lang="en" style="display:none;">
-  <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
-  <table class="table table-bordered text-center">
-    <thead class="table-light">
-      <tr>
-        <th>Category</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Advantages</td>
-        <td>
-          <ul class="list-unstyled text-start m-0 p-0">
-            <li>Fast and efficient heating.</li>
-            <li>Environmentally friendly.</li>
-            <li>Easy control and precise temperature regulation.</li>
-            <li>Minimal energy loss.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>Disadvantages</td>
-        <td>
-          <ul class="list-unstyled text-start m-0 p-0">
-            <li>Higher energy consumption compared to passive heaters.</li>
-            <li>Need for an advanced energy management system in the vehicle.</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-    </div>
-
-    <!-- Tabela z danymi produktu -->
-
+    <!-- Sekcja Advantages and Disadvantages (EN) -->
+    <section class="mb-4" data-lang="en" style="display:none;">
+      <h2 class="m-3 text-center">Advantages and Disadvantages</h2>
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Advantages</td>
+            <td>
+              <ul class="list-unstyled text-start m-0 p-0">
+                <li>Fast and efficient heating.</li>
+                <li>Environmentally friendly.</li>
+                <li>Easy control and precise temperature regulation.</li>
+                <li>Minimal energy loss.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Disadvantages</td>
+            <td>
+              <ul class="list-unstyled text-start m-0 p-0">
+                <li>Higher energy consumption compared to passive heaters.</li>
+                <li>Need for an advanced energy management system in the vehicle.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
 
   <!-- Stopka (Footer) -->
-  <footer class=" text-center py-3">
+  <footer class="text-center py-3">
     <div class="container">
       <small class="text-muted">&copy; 2025 eMobCAD</small>
     </div>
